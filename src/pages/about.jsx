@@ -1,27 +1,22 @@
 import React from "react";
-import "./AboutUs.css";
+import "../css/aboutUs.css";
 
 const AboutUs = () => {
   return (
     <div className="about-us-container">
-      {/* Heading */}
       <h1 className="about-us-heading">About Us</h1>
-
-      {/* Picture and Text Section */}
       <div className="about-us-intro">
         <img
-          src="https://via.placeholder.com/600x400"
+          src="assets/about-us-banner.jpg"
           alt="Happy Pets"
           className="about-us-image"
         />
         <p className="about-us-text">
-          We at PawsClaws believe in bringing joy to your pets. Our mission is
-          to provide exceptional care and products to make every pet’s life
-          better. From grooming to nutrition, we’ve got you covered!
+          At PawsClaws, we strive to provide the best care for your beloved
+          pets. From expert grooming services to nutritious meals and playful
+          toys, our mission is to make every pet feel loved and cared for.
         </p>
       </div>
-
-      {/* Services Section */}
       <div className="services-section">
         <h2 className="services-heading">Our Services</h2>
         <div className="services-cards">
@@ -43,17 +38,16 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-      {/* Final Picture with Text */}
       <div className="shop-today-section">
-        <img
-          src="https://via.placeholder.com/1200x500"
-          alt="Shop Today"
-          className="shop-today-image"
-        />
-        <div className="shop-today-text">
-          <h2>Shop Today</h2>
-          <p>Discover our wide range of products to keep your pets happy and healthy.</p>
+        <div className="shop-today-background">
+          <div className="shop-today-content">
+            <h2>Shop Today</h2>
+            <p>
+              Discover our exclusive collection of pet care products, from
+              nutritious food to toys and grooming essentials. Pamper your pets
+              with the best!
+            </p>
+          </div>
         </div>
       </div>
     </div>
