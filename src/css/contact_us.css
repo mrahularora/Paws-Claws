@@ -1,0 +1,118 @@
+.contact-container {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    padding: 21px;
+    font-size: 18px;
+}
+
+/* Grid Layout */
+.contact-info {
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+    justify-content: center;
+    gap: 19px;
+}
+
+/* Column Styling */
+.contact-column {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 19px;
+}
+
+.contact-column:nth-child(1) {
+    border-right: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.phone-number {
+    color: #FF6500;
+    font-weight: 600;
+}
+
+.email {
+    text-decoration: none;
+    color: #333;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+/* Contact Header */
+.contact-header,
+.contact-sub-header {
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: rgba(146, 58, 0, 0.41);
+    padding: 59px;
+    color: #f9f9f8;
+    margin: 0;
+}
+
+.contact-header {
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    padding-bottom: 0;
+}
+
+.contact-sub-header {
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.contact-banner {
+    background: url("../assets/banner-contactus.jpg") no-repeat;
+    background-position-y: center;
+    background-size: cover;
+    border-radius: 14px;
+    margin: 21px 49px;
+}
+
+/* Contact Form */
+.contact-form {
+    text-align: left;
+    margin-top: 19px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input,
+textarea {
+    margin-top: 6px;
+    width: 98%;
+    padding: 11px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    background-color: #007bfe;
+    padding: 11px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #0056b2;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
