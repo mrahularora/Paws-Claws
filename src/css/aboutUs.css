@@ -1,0 +1,109 @@
+/* General Styles */
+.about-us-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .about-us-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  /* Intro Section */
+  .about-us-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  .about-us-image {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .about-us-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    flex: 1;
+  }
+  
+  /* Services Section */
+  .services-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .services-heading {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .services-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-card {
+    width: 220px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Shop Today Section */
+  .shop-today-section {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .shop-today-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .shop-today-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 58, 138, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .shop-today-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .shop-today-text p {
+    font-size: 1.2rem;
+  }
+  
