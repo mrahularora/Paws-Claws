@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="brand">
         <Link to="/" className="link">
-          MyApp
+        PawsClaws
         </Link>
       </div>
       <div className="links">
