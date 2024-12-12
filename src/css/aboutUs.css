@@ -1,0 +1,132 @@
+.about-us-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .about-us-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  .about-us-image {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .about-us-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    flex: 1;
+  }
+  
+  .services-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .services-heading {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .services-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-card {
+    width: 220px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .shop-today-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("/public/assets/about-us-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .shop-today-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .shop-today-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .shop-today-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .shop-today-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-today-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .shop-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #a3be8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-button:hover {
+    background-color: #88c0d0;
+  }
+  
+  
