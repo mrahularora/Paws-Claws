@@ -16,10 +16,10 @@ function App() {
       <Navbar />
       <main style={{ flex: 1, }}>
         <Routes>
-          <Route exact path="/"  element={<Homepage/>}/>
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/shop" element={<Shop/>} />
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
       </main>
       <Footer />
