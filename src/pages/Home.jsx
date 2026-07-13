@@ -3,12 +3,15 @@ import "../styles/Home.css";
 import about from "../assets/about.jpg";
 import blog1 from "../assets/blog-1.jpg";
 import blog2 from "../assets/blog-2.jpg";
+import hero from "../assets/hero.jpg";
+import contactBanner from "../assets/banner-contactus.jpg";
 
 const blogs = [
   {
     id: 1,
     image: blog1,
     category: "Pet Care",
+    type: "Guide",
     date: "13 Jul, 2026",
     title: "Simple ways to keep pets active indoors",
     description:
@@ -18,10 +21,51 @@ const blogs = [
     id: 2,
     image: blog2,
     category: "Nutrition",
+    type: "Checklist",
     date: "13 Jul, 2026",
     title: "Choosing food by age, size, and habit",
     description:
       "Match portions and formulas to your pet's life stage, activity level, and vet guidance.",
+  },
+  {
+    id: 3,
+    image: about,
+    category: "Grooming",
+    type: "Tips",
+    date: "12 Jul, 2026",
+    title: "A calm grooming routine for nervous pets",
+    description:
+      "Short sessions, familiar tools, and reward breaks can make brushing and nail care easier.",
+  },
+  {
+    id: 4,
+    image: hero,
+    category: "Shopping",
+    type: "Buying Guide",
+    date: "11 Jul, 2026",
+    title: "What to stock before bringing home a new pet",
+    description:
+      "Start with food, bowls, ID tags, bedding, waste supplies, and a few safe enrichment toys.",
+  },
+  {
+    id: 5,
+    image: contactBanner,
+    category: "Wellness",
+    type: "Safety",
+    date: "10 Jul, 2026",
+    title: "Small signs your pet may need a routine checkup",
+    description:
+      "Changes in appetite, sleep, coat, or energy are worth tracking and sharing with your vet.",
+  },
+  {
+    id: 6,
+    image: blog1,
+    category: "Training",
+    type: "Routine",
+    date: "09 Jul, 2026",
+    title: "Five-minute training games that fit busy days",
+    description:
+      "Simple cues, scent games, and recall practice can build confidence without long sessions.",
   },
 ];
 
@@ -89,6 +133,10 @@ const HomePage = () => {
                         Make everyday pet care easier with trusted products,
                         friendly service, and clear advice.
                       </p>
+                      <ul>
+                        <li>Recommend products that match real pet routines.</li>
+                        <li>Keep essentials easy to find and understand.</li>
+                      </ul>
                     </div>
                   )}
                   {activeTab === "vision" && (
@@ -97,6 +145,10 @@ const HomePage = () => {
                         Build a local pet store experience that feels useful,
                         warm, and simple from browsing to checkout.
                       </p>
+                      <ul>
+                        <li>Grow a trusted care hub for pet owners.</li>
+                        <li>Make every visit feel practical and welcoming.</li>
+                      </ul>
                     </div>
                   )}
                 </div>
@@ -110,26 +162,32 @@ const HomePage = () => {
         <h2>Our Excellent Pet Care Services</h2>
         <div className="services-grid">
           <div className="service-item">
+            <span className="service-number">01</span>
             <h4>Pet Boarding</h4>
             <p>Comfortable short-term care with clean routines.</p>
           </div>
           <div className="service-item">
+            <span className="service-number">02</span>
             <h4>Pet Feeding</h4>
             <p>Food recommendations by age, size, and habit.</p>
           </div>
           <div className="service-item">
+            <span className="service-number">03</span>
             <h4>Pet Grooming</h4>
             <p>Bathing, brushing, trims, and coat care basics.</p>
           </div>
           <div className="service-item">
+            <span className="service-number">04</span>
             <h4>Pet Training</h4>
             <p>Positive routines for calmer daily behavior.</p>
           </div>
           <div className="service-item">
+            <span className="service-number">05</span>
             <h4>Pet Exercise</h4>
             <p>Toys and play plans for active bodies and minds.</p>
           </div>
           <div className="service-item">
+            <span className="service-number">06</span>
             <h4>Pet Treatment</h4>
             <p>Care essentials that support vet-led wellness.</p>
           </div>
@@ -156,6 +214,7 @@ const HomePage = () => {
                 {/* Blog Content */}
                 <div className="blog-content">
                   <div className="blog-meta">
+                    <span className="blog-type">{blog.type}</span>
                     <span>
                       <i className="icon-bookmark"></i> {blog.category}
                     </span>

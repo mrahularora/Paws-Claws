@@ -12,61 +12,13 @@ import {
   Turtle,
 } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/Shop.css";
 import image1 from "../assets/1.jpg";
 import image2 from "../assets/2.jpg";
-
-const customStyles = `
-  :root {
-    --primary-color: #0F374A;
-    --secondary-color: #b5ba89;
-    --text-color: #fff;
-    --background-color: #f8f9fa;
-  }
-
-  body {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-  }
-
-  .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--text-color);
-  }
-
-  .btn-primary:hover, .btn-primary:focus {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: var(--primary-color);
-  }
-
-  .btn-outline-primary {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-
-  .btn-outline-primary:hover, .btn-outline-primary:focus {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--text-color);
-  }
-
-  .text-primary {
-    color: var(--primary-color) !important;
-  }
-
-  .text-secondary {
-    color: var(--secondary-color) !important;
-  }
-
-  .bg-primary {
-    background-color: var(--primary-color) !important;
-  }
-
-  .bg-secondary {
-    background-color: var(--secondary-color) !important;
-  }
-`;
+import aboutImage from "../assets/about.jpg";
+import blogImage1 from "../assets/blog-1.jpg";
+import blogImage2 from "../assets/blog-2.jpg";
+import heroImage from "../assets/hero.jpg";
 
 const products = [
   {
@@ -97,7 +49,7 @@ const products = [
   {
     id: 3,
     name: "Fluval Flex Aquarium Kit",
-    image: image1,
+    image: blogImage1,
     rating: 4,
     price: 199.99,
     sizes: ["15 Gallon", "32 Gallon"],
@@ -110,7 +62,7 @@ const products = [
   {
     id: 4,
     name: "Prevue Bird Flight Cage",
-    image: image1,
+    image: blogImage2,
     rating: 5,
     price: 149.99,
     sizes: ["Medium", "Large"],
@@ -123,7 +75,7 @@ const products = [
   {
     id: 5,
     name: "Orthopedic Dog Bed",
-    image: image1,
+    image: aboutImage,
     rating: 4,
     price: 89.99,
     sizes: ["Small", "Medium", "Large"],
@@ -135,7 +87,7 @@ const products = [
   {
     id: 6,
     name: "Catit Fresh & Clear Fountain",
-    image: image1,
+    image: heroImage,
     rating: 4,
     price: 39.99,
     sizes: ["2L", "3L"],
@@ -147,7 +99,7 @@ const products = [
   {
     id: 7,
     name: "Tetra ColorFusion Flakes",
-    image: image1,
+    image: blogImage1,
     rating: 5,
     price: 15.99,
     sizes: ["200g", "500g"],
@@ -172,7 +124,7 @@ const products = [
   {
     id: 9,
     name: "Oxbow Essentials Rabbit Food",
-    image: image1,
+    image: aboutImage,
     rating: 5,
     price: 19.99,
     sizes: ["5lb", "10lb"],
@@ -236,7 +188,7 @@ export default function ShopPage() {
     indexOfFirstProduct,
     indexOfLastProduct
   );
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / productsPerPage));
 
   const addToCart = (product) => {
     setCart([...cart, product]);
@@ -276,6 +228,10 @@ export default function ShopPage() {
   }, [selectedCategory, searchTerm, priceRange, sortBy]);
 
   useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  useEffect(() => {
     const params = new URLSearchParams();
     if (selectedCategory !== "All") params.set("category", selectedCategory);
     if (searchTerm) params.set("search", searchTerm);
@@ -292,8 +248,7 @@ export default function ShopPage() {
   }, [selectedCategory, searchTerm, priceRange, sortBy, currentPage]);
 
   return (
-    <>
-      <style>{customStyles}</style>
+    <div className="shop-page">
       <div className="container py-5">
         {/* Hero Section */}
         <div className="text-center mb-5">
@@ -373,16 +328,19 @@ export default function ShopPage() {
 
         {/* Product Grid */}
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          {currentProducts.length === 0 && (
+            <div className="col-12">
+              <div className="shop-empty-state">
+                <h3>No products found</h3>
+                <p>Try a wider price range or a different search term.</p>
+              </div>
+            </div>
+          )}
           {currentProducts.map((product) => (
             <div key={product.id} className="col">
               <div className="card h-100 shadow-sm">
                 <div className="position-relative">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="card-img-top"
-                    style={{ objectFit: "cover", height: "200px" }}
-                  />
+                  <img src={product.image} alt={product.name} className="card-img-top" />
                   {product.discount > 0 && (
                     <span className="position-absolute top-0 end-0 badge bg-danger m-2">
                       {product.discount}% OFF
@@ -475,6 +433,15 @@ export default function ShopPage() {
         {totalPages > 1 && (
           <nav className="mt-5">
             <ul className="pagination justify-content-center">
+              <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                <button
+                  className="page-link"
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                >
+                  Previous
+                </button>
+              </li>
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                 (page) => (
                   <li
@@ -492,6 +459,15 @@ export default function ShopPage() {
                   </li>
                 )
               )}
+              <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+                <button
+                  className="page-link"
+                  disabled={currentPage === totalPages}
+                  onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                >
+                  Next
+                </button>
+              </li>
             </ul>
           </nav>
         )}
@@ -513,6 +489,6 @@ export default function ShopPage() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

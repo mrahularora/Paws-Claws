@@ -90,6 +90,23 @@ const ContactDetails = () => {
                     </form>
                 </div>
             </div>
+            <div className="contact-extra">
+                <div>
+                    <h3>Customer Support</h3>
+                    <p>Order questions, product recommendations, returns, and care guidance.</p>
+                    <strong>Response time: within 1 business day</strong>
+                </div>
+                <div>
+                    <h3>Store Services</h3>
+                    <p>Ask about grooming availability, product pickup, and recurring essentials.</p>
+                    <strong>Best hours: 10:00 AM - 6:00 PM</strong>
+                </div>
+                <div>
+                    <h3>Before You Visit</h3>
+                    <p>Bring your pet's age, breed, weight, and dietary notes for better recommendations.</p>
+                    <strong>Walk-ins welcome</strong>
+                </div>
+            </div>
         </div>
     );
 };

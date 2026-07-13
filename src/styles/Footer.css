@@ -1,71 +1,65 @@
-/* Footer Container */
 .footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 2rem 1rem;
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  
-  .footer-column h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  .footer-column ul li span {
-    color: var(--text-color);
-  }
-  
-  /* Connect Section */
-  .connect .contact-button {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin: 1rem 0;
-    display: inline-block;
-    text-decoration: none;
-  }
-  
-  .connect .contact-button:hover {
-    background-color: #007bff; /* Adjusted hover color */
-  }
-  
-  .social-icons a {
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  
-  .social-icons a:hover {
-    color: var(--secondary-color);
-  }
-  
-  /* Footer Bottom */
-  .footer-bottom {
-    text-align: center;
-    border-top: 1px solid var(--text-color);
-    padding-top: 1rem;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .footer-bottom p {
-    margin: 0.5rem 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-    }
-  
-    .footer-column {
-      margin-bottom: 1rem;
-    }
-  }
-  
+  background: var(--primary-dark);
+  color: var(--text-color);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem) 1.5rem;
+}
+
+.footer-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.footer-column h3 {
+  color: #f7d891;
+  font-size: 1rem;
+  margin: 0 0 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li {
+  margin: 0.55rem 0;
+}
+
+.footer-column ul li span,
+.footer-column p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.connect .contact-button {
+  background: var(--accent-color);
+  border-radius: 999px;
+  color: var(--primary-dark);
+  display: inline-block;
+  font-weight: 800;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.connect .contact-button:hover {
+  background: #f0c46f;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.9rem;
+  margin: 2rem auto 0;
+  max-width: 1180px;
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0.45rem 0;
+}
