@@ -13,18 +13,22 @@ import {
 } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Shop.css";
-import image1 from "../assets/1.jpg";
-import image2 from "../assets/2.jpg";
-import aboutImage from "../assets/about.jpg";
-import blogImage1 from "../assets/blog-1.jpg";
-import blogImage2 from "../assets/blog-2.jpg";
-import heroImage from "../assets/hero.jpg";
+import dogFoodImage from "../assets/products/dog-food.png";
+import catCircuitImage from "../assets/products/cat-circuit.png";
+import aquariumKitImage from "../assets/products/aquarium-kit.png";
+import birdCageImage from "../assets/products/bird-cage.png";
+import dogBedImage from "../assets/products/dog-bed.png";
+import catFountainImage from "../assets/products/cat-fountain.png";
+import fishFlakesImage from "../assets/products/fish-flakes.png";
+import birdFoodImage from "../assets/products/bird-food.png";
+import rabbitFoodImage from "../assets/products/rabbit-food.png";
+import reptileTerrariumImage from "../assets/products/reptile-terrarium.png";
 
 const products = [
   {
     id: 1,
     name: "Royal Canin Dog Food",
-    image: image1,
+    image: dogFoodImage,
     rating: 5,
     price: 54.99,
     sizes: ["3kg", "7kg", "15kg"],
@@ -37,7 +41,7 @@ const products = [
   {
     id: 2,
     name: "Catit Senses 2.0 Circuit",
-    image: image2,
+    image: catCircuitImage,
     rating: 4,
     price: 29.99,
     sizes: ["One Size"],
@@ -49,7 +53,7 @@ const products = [
   {
     id: 3,
     name: "Fluval Flex Aquarium Kit",
-    image: blogImage1,
+    image: aquariumKitImage,
     rating: 4,
     price: 199.99,
     sizes: ["15 Gallon", "32 Gallon"],
@@ -62,7 +66,7 @@ const products = [
   {
     id: 4,
     name: "Prevue Bird Flight Cage",
-    image: blogImage2,
+    image: birdCageImage,
     rating: 5,
     price: 149.99,
     sizes: ["Medium", "Large"],
@@ -75,7 +79,7 @@ const products = [
   {
     id: 5,
     name: "Orthopedic Dog Bed",
-    image: aboutImage,
+    image: dogBedImage,
     rating: 4,
     price: 89.99,
     sizes: ["Small", "Medium", "Large"],
@@ -87,7 +91,7 @@ const products = [
   {
     id: 6,
     name: "Catit Fresh & Clear Fountain",
-    image: heroImage,
+    image: catFountainImage,
     rating: 4,
     price: 39.99,
     sizes: ["2L", "3L"],
@@ -99,7 +103,7 @@ const products = [
   {
     id: 7,
     name: "Tetra ColorFusion Flakes",
-    image: blogImage1,
+    image: fishFlakesImage,
     rating: 5,
     price: 15.99,
     sizes: ["200g", "500g"],
@@ -111,7 +115,7 @@ const products = [
   {
     id: 8,
     name: "Kaytee Forti-Diet Pro Health",
-    image: image2,
+    image: birdFoodImage,
     rating: 4,
     price: 24.99,
     sizes: ["2lb", "5lb", "10lb"],
@@ -124,7 +128,7 @@ const products = [
   {
     id: 9,
     name: "Oxbow Essentials Rabbit Food",
-    image: aboutImage,
+    image: rabbitFoodImage,
     rating: 5,
     price: 19.99,
     sizes: ["5lb", "10lb"],
@@ -136,7 +140,7 @@ const products = [
   {
     id: 10,
     name: "Zilla Reptile Terrarium",
-    image: image2,
+    image: reptileTerrariumImage,
     rating: 4,
     price: 129.99,
     sizes: ["20 Gallon", "40 Gallon"],

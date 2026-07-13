@@ -107,11 +107,22 @@
 .shop-page .pagination .page-link {
   border-color: var(--line-color);
   color: var(--primary-color);
+  font-weight: 800;
+  min-width: 44px;
+  text-align: center;
 }
 
 .shop-page .pagination .active .page-link {
   background: var(--primary-color);
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(18, 56, 74, 0.16);
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
+}
+
+.shop-page .pagination .disabled .page-link {
+  color: #9aa7ad;
 }
 
 .shop-empty-state {

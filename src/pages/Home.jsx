@@ -12,6 +12,7 @@ const blogs = [
     image: blog1,
     category: "Pet Care",
     type: "Guide",
+    readTime: "4 min read",
     date: "13 Jul, 2026",
     title: "Simple ways to keep pets active indoors",
     description:
@@ -22,6 +23,7 @@ const blogs = [
     image: blog2,
     category: "Nutrition",
     type: "Checklist",
+    readTime: "3 min read",
     date: "13 Jul, 2026",
     title: "Choosing food by age, size, and habit",
     description:
@@ -32,6 +34,7 @@ const blogs = [
     image: about,
     category: "Grooming",
     type: "Tips",
+    readTime: "5 min read",
     date: "12 Jul, 2026",
     title: "A calm grooming routine for nervous pets",
     description:
@@ -42,6 +45,7 @@ const blogs = [
     image: hero,
     category: "Shopping",
     type: "Buying Guide",
+    readTime: "6 min read",
     date: "11 Jul, 2026",
     title: "What to stock before bringing home a new pet",
     description:
@@ -52,6 +56,7 @@ const blogs = [
     image: contactBanner,
     category: "Wellness",
     type: "Safety",
+    readTime: "4 min read",
     date: "10 Jul, 2026",
     title: "Small signs your pet may need a routine checkup",
     description:
@@ -62,6 +67,7 @@ const blogs = [
     image: blog1,
     category: "Training",
     type: "Routine",
+    readTime: "3 min read",
     date: "09 Jul, 2026",
     title: "Five-minute training games that fit busy days",
     description:
@@ -197,10 +203,14 @@ const HomePage = () => {
         <div className="container">
           {/* Section Header */}
           <div className="section-header">
-            <h6 className="section-subtitle">Latest Blog</h6>
-            <h1 className="section-title">
-              Latest Articles From Our Blog Post
-            </h1>
+            <div>
+              <h6 className="section-subtitle">Latest Blog</h6>
+              <h1 className="section-title">Care notes for better pet days</h1>
+            </div>
+            <p>
+              Practical reads for feeding, grooming, shopping, and keeping pets
+              comfortable at home.
+            </p>
           </div>
 
           {/* Blog Grid */}
@@ -221,6 +231,7 @@ const HomePage = () => {
                     <span>
                       <i className="icon-calendar"></i> {blog.date}
                     </span>
+                    <span>{blog.readTime}</span>
                   </div>
                   <h5 className="blog-title">{blog.title}</h5>
                   <p className="blog-description">{blog.description}</p>
