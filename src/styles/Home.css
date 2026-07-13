@@ -16,7 +16,8 @@
     margin: 1rem 0;
   }
   
-  .hero-content button {
+  .hero-content a {
+    display: inline-block;
     margin: 1rem;
     padding: 0.8rem 2rem;
     background: var(--secondary-color);
@@ -24,9 +25,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
   }
   
-  .hero-content button:hover {
+  .hero-content a:hover {
     background: var(--primary-color);
   }
   

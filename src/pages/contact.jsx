@@ -1,9 +1,8 @@
 // Abhinashdeep Singh 8907518
 import React from "react";
-import '../css/contact_us.css';
-import ContactHeader from "../components/contact-header";
-import ContactDetails from "../components/contact-details";
-import Footer from '../components/Footer';
+import "../styles/Contact.css";
+import ContactHeader from "../components/ContactHeader";
+import ContactDetails from "../components/ContactDetails";
 
 const Contact = () => {
     return (

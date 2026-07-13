@@ -17,14 +17,8 @@
     font-size: 1.2rem;
   }
   
-  .footer-column ul li a {
+  .footer-column ul li span {
     color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-column ul li a:hover {
-    color: var(--secondary-color);
   }
   
   /* Connect Section */
@@ -32,10 +26,10 @@
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
     margin: 1rem 0;
+    display: inline-block;
+    text-decoration: none;
   }
   
   .connect .contact-button:hover {

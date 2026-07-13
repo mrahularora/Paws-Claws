@@ -2,14 +2,19 @@
 import React from "react";
 
 const ContactDetails = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        event.currentTarget.reset();
+    };
+
     return (
         <div className="contact-container">
             <div className="contact-info">
                 {/* Contact Info */}
                 <div className="contact-column">
                     <p>
-                        <span className="bold">Paws & Claws Shop</span> has always been the hottest
-                        places in the area and is managed by our experts in the industry.
+                        <span className="bold">PawsClaws</span> is managed by local pet care
+                        specialists who help customers find the right products quickly.
                     </p>
                     <p>
                         You can dial our number at{" "}
@@ -17,26 +22,26 @@ const ContactDetails = () => {
                         10:00 PM.
                     </p>
                     <p>
-                        Incase of any other inquiries or business opportunitis, you can fill out this
+                        For other inquiries or business opportunities, you can fill out this
                         form and we will reach out to you as soon as possible. Our hotline numbers are:
                         <br />
                         <span><i className="fas fa-phone"></i></span> 0201-789114247 (10 AM to 8 PM, Mon to Fri)
                         <br />
                         <span><i className="fas fa-envelope"></i></span>{" "}
-                        <a href="mailto:contact@travelkhana.com" className="email">
-                            customerservice@pawnnclaws.com
+                        <a href="mailto:customerservice@pawsclaws.com" className="email">
+                            customerservice@pawsclaws.com
                         </a>
                     </p>
                     {/* Office Address */}
                     <p>
                         <span className="bold">New Office Address:</span>
                         <br />
-                        Pawn & Claw Shop, 124 Bleams Dr W,Unit 3 and 4, Kitchener, ON N3C 2F7
+                        PawsClaws, 124 Bleams Dr W, Unit 3 and 4, Kitchener, ON N3C 2F7
                     </p>
                     <p>
                         <span className="bold">Business Address:</span>
                         <br />
-                        Pawn & Claw Shop, 732 Queen St E, Unit 2 and 3, Cambridge, ON N3C 7A3
+                        PawsClaws, 732 Queen St E, Unit 2 and 3, Cambridge, ON N3C 7A3
                     </p>
 
                 </div>
@@ -44,7 +49,7 @@ const ContactDetails = () => {
                 {/* Contact Form */}
                 <div className="contact-column">
                     <h2>Contact Us</h2>
-                    <form className="contact-form">
+                    <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name:</label>
                             <input

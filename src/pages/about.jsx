@@ -1,5 +1,6 @@
 import React from "react";
-import "../css/aboutUs.css";
+import "../styles/About.css";
+import aboutBanner from "../assets/about.jpg";
 
 const AboutUs = () => {
   return (
@@ -7,7 +8,7 @@ const AboutUs = () => {
       <h1 className="about-us-heading">About Us</h1>
       <div className="about-us-intro">
         <img
-          src="assets/about-us-banner.jpg"
+          src={aboutBanner}
           alt="Happy Pets"
           className="about-us-image"
         />

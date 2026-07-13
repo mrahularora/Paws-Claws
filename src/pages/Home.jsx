@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Home.css";
+import "../styles/Home.css";
 import about from "../assets/about.jpg";
 import blog1 from "../assets/blog-1.jpg";
 import blog2 from "../assets/blog-2.jpg";
@@ -8,20 +8,20 @@ const blogs = [
   {
     id: 1,
     image: blog1,
-    category: "Web Design",
-    date: "01 Jan, 2045",
-    title: "Dolor sit magna rebum clita rebum dolor",
+    category: "Pet Care",
+    date: "13 Jul, 2026",
+    title: "Simple ways to keep pets active indoors",
     description:
-      "Ipsum sed lorem amet dolor amet duo ipsum amet et dolore est stet tempor eos dolor",
+      "Enrichment toys, short training games, and routine play help pets stay healthy between walks.",
   },
   {
     id: 2,
     image: blog2,
-    category: "Web Design",
-    date: "01 Jan, 2045",
-    title: "Dolor sit magna rebum clita rebum dolor",
+    category: "Nutrition",
+    date: "13 Jul, 2026",
+    title: "Choosing food by age, size, and habit",
     description:
-      "Ipsum sed lorem amet dolor amet duo ipsum amet et dolore est stet tempor eos dolor",
+      "Match portions and formulas to your pet's life stage, activity level, and vet guidance.",
   },
 ];
 
@@ -34,11 +34,11 @@ const HomePage = () => {
           <h1>Pet Shop</h1>
           <p>MAKE YOUR PETS HAPPY</p>
           <p>
-            Dolore tempor aliqua lorem rebum kasd elitr eirmod dolore diam eos
-            kasd. Kasd clita ea justo est sed kasd erat clita sea.
+            Food, toys, grooming, and everyday care essentials for healthier,
+            happier pets.
           </p>
-          <button className="read-more">Read More</button>
-          <button className="play-video">Play Video</button>
+          <a className="read-more" href="/shop">Shop Now</a>
+          <a className="play-video" href="/about">About Us</a>
         </div>
       </section>
 
@@ -57,8 +57,8 @@ const HomePage = () => {
                 <h2>We Keep Your Pets Happy All Time</h2>
               </div>
               <h4 className="about-description">
-                Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet
-                no labore lorem sit clita duo justo magna dolore.
+                We pair dependable products with practical pet care guidance so
+                owners can shop with confidence.
               </h4>
 
               {/* Tabs Section */}
@@ -86,18 +86,16 @@ const HomePage = () => {
                   {activeTab === "mission" && (
                     <div className="tab-panel active">
                       <p>
-                        Tempor erat elitr at rebum at at clita aliquyam
-                        consetetur. Diam dolor diam ipsum et, tempor voluptua
-                        sit consetetur sit.
+                        Make everyday pet care easier with trusted products,
+                        friendly service, and clear advice.
                       </p>
                     </div>
                   )}
                   {activeTab === "vision" && (
                     <div className="tab-panel active">
                       <p>
-                        Tempor erat elitr at rebum at at clita aliquyam
-                        consetetur. Diam dolor diam ipsum et, tempor voluptua
-                        sit consetetur sit.
+                        Build a local pet store experience that feels useful,
+                        warm, and simple from browsing to checkout.
                       </p>
                     </div>
                   )}
@@ -113,33 +111,27 @@ const HomePage = () => {
         <div className="services-grid">
           <div className="service-item">
             <h4>Pet Boarding</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Comfortable short-term care with clean routines.</p>
           </div>
           <div className="service-item">
             <h4>Pet Feeding</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Food recommendations by age, size, and habit.</p>
           </div>
           <div className="service-item">
             <h4>Pet Grooming</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Bathing, brushing, trims, and coat care basics.</p>
           </div>
           <div className="service-item">
             <h4>Pet Training</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Positive routines for calmer daily behavior.</p>
           </div>
           <div className="service-item">
             <h4>Pet Exercise</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Toys and play plans for active bodies and minds.</p>
           </div>
           <div className="service-item">
             <h4>Pet Treatment</h4>
-            <p>Kasd dolor no lorem sit tempor...</p>
-            <a href="#">Read More</a>
+            <p>Care essentials that support vet-led wellness.</p>
           </div>
         </div>
       </section>
@@ -173,9 +165,9 @@ const HomePage = () => {
                   </div>
                   <h5 className="blog-title">{blog.title}</h5>
                   <p className="blog-description">{blog.description}</p>
-                  <a href="#" className="blog-read-more">
+                  <span className="blog-read-more">
                     Read More <i className="icon-chevron-right"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             ))}

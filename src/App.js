@@ -1,14 +1,11 @@
-import "./App.css";
 import "./index.css";
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
-import Homepage from "./pages/homepage";
-import AboutUs from "./pages/about";
-
-import Contact from "./pages/contact";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import ShopPage from "./pages/ShopPage";
+import Shop from "./pages/Shop";
 
 function App() {
   return (
@@ -16,10 +13,10 @@ function App() {
       <Navbar />
       <main style={{ flex: 1 }}>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
       </main>
       <Footer />
